@@ -1,13 +1,8 @@
 <?php
 
-abstract class APhpClass {
-    public function Mentors($ment) {
-        $this->ment = $ment;
-    }
-
-    public function getMentors() {
-        echo "Mentor: $this->ment";
-        echo "<br />";
+abstract class APhpClass {    
+    public function __construct($mentor) {
+        $this->mentor = $mentor;
     }
 
     public function startDate($date) {
@@ -15,6 +10,7 @@ abstract class APhpClass {
     }
 
     public function getDate() {
+        echo "<br />";
         echo "Started date: $this->date";
         echo "<br />";
     }
@@ -41,14 +37,18 @@ abstract class APhpClass {
     abstract function date();
     abstract function batch();
     abstract function name();
-    abstract function ment();
+    abstract function mentor();
 }
 
 class Mentors extends APhpClass {
     protected $name;
     protected $last;
     protected $batch;
-    protected $ment;
+    protected $mentor;
+
+    public function mentor() {
+        return $this->__construct();
+    }
 
     public function date() {
         return $this->getDate();
@@ -60,9 +60,5 @@ class Mentors extends APhpClass {
 
     public function name() {
         return $this->getStudentName();
-    }
-
-    public function ment() {
-        return $this->getMentors();
     }
 }

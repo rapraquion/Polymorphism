@@ -14,15 +14,10 @@ class Mentor implements IPhpClass {
     protected $name;
     protected $last;
     protected $batch;
-    protected $ment;
+    public $mentor;
 
-    public function Mentor($ment) {
-        $this->ment = $ment;
-    }
-
-    public function getMentor() {
-        echo "Mentor: $this->ment";
-        echo "<br />";
+    public function __construct($ment) {
+        $this->mentor = $ment;
     }
 
     public function startDate($date) {
@@ -30,6 +25,7 @@ class Mentor implements IPhpClass {
     }
 
     public function getDate() {
+        echo "<br />";
         echo "Started date: $this->date";
         echo "<br />";
         echo "<br />";

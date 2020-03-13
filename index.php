@@ -20,18 +20,17 @@
             $mentor->setStudentName('Rap', 'Raquion');
             echo $mentor->getStudentName();
             echo $mentor->getClassBatch();
-            echo $mentor->getMentor();
+            echo "Mentor: $mentor->mentor";
             echo $mentor->getDate();
     echo "--------------start of abstract---------------------";
     echo "<br />"; echo "<br />";
         $mentors = new Mentors('Jino Lacson');
             $mentors->startDate('Mar. 3, 2020');
             $mentors->classBatch('PHP');
-            $mentors->Mentors('Jino Lacson');
             $mentors->setStudentName('Rap', 'Raquion');
             echo $mentors->name();
             echo $mentors->batch();
-            echo $mentors->ment();
+            echo "Mentor: $mentor->mentor";
             echo $mentors->date();
     ?>
 </body>
