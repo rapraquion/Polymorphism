@@ -15,10 +15,11 @@ Implement class Polymorphism that blueprints and share its class properties and 
         public function getStudentName();
     }
 
-
     class Mentor implements IPhpClass {
         // Your methods
     }
+    
+    $mentor = new Mentor("Jino Lacson");
 
 #### Abstract
 
